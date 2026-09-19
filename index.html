@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Converter Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>💱 Currency Converter Pro</h1>
+        <button id="themeBtn">🌙</button>
+    </div>
+
+    <div class="clock">
+        <h3 id="dateTime"></h3>
+    </div>
+
+    <div class="card">
+
+        <input type="number" id="amount" placeholder="Enter Amount">
+
+        <select id="fromCurrency">
+            <option value="USD">USD 🇺🇸</option>
+            <option value="INR">INR 🇮🇳</option>
+            <option value="EUR">EUR 🇪🇺</option>
+            <option value="GBP">GBP 🇬🇧</option>
+            <option value="JPY">JPY 🇯🇵</option>
+        </select>
+
+        <button id="swapBtn">⇅ Swap</button>
+
+        <select id="toCurrency">
+            <option value="INR">INR 🇮🇳</option>
+            <option value="USD">USD 🇺🇸</option>
+            <option value="EUR">EUR 🇪🇺</option>
+            <option value="GBP">GBP 🇬🇧</option>
+            <option value="JPY">JPY 🇯🇵</option>
+        </select>
+
+        <button class="convert-btn" onclick="convertCurrency()">
+            Convert
+        </button>
+
+        <div class="rate-box">
+            <h3 id="exchangeRate">Exchange Rate</h3>
+        </div>
+
+        <div class="result-box">
+            <h2 id="result">Result Appears Here</h2>
+        </div>
+
+        <div class="actions">
+            <button onclick="copyResult()">📋 Copy</button>
+            <button onclick="saveFavorite()">⭐ Favorite</button>
+            <button onclick="downloadHistory()">⬇ Download</button>
+            <button onclick="clearHistory()">🗑 Clear</button>
+        </div>
+
+        <div class="favorite-box">
+            <h3>⭐ Favorite Pair</h3>
+            <p id="favoritePair">No Favorite Saved</p>
+        </div>
+
+        <div class="history">
+            <h3>📜 Conversion History</h3>
+            <ul id="historyList"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
